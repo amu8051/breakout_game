@@ -1,7 +1,8 @@
 # Breakout-Game
 Languages: HTML/CSS/JS
 
-A ball bounces on a plank and border walls to break all the blocks(barriers). Score of 10 means win!. If ball misses the plank, game over!
+A ball bounces on a plank and border walls to break all the blocks(barriers). Score of 10 means win!. 
+If ball misses the plank, game over!
 The plank can be moved using Left and Right Arrow Keys. 
 
 Demo:
