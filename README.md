@@ -8,7 +8,7 @@ The plank can be moved using Left and Right Arrow Keys.
 Demo:
 [Breakout Game.webm](https://user-images.githubusercontent.com/26090486/192937141-81fb1623-1404-4a83-9bfd-b2a301fbacab.webm)
 
-\n
+
 Try it out: https://comforting-sunshine-49a45d.netlify.app/
 
 
