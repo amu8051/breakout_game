@@ -101,6 +101,7 @@ start_btn.addEventListener('click', () => {
         moveBall(timer)
     }, 30);  
     start_btn.disabled ='true';
+    start_btn.style.backgroundColor = 'grey';
 })
 
 //Move the ball
