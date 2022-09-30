@@ -100,6 +100,7 @@ start_btn.addEventListener('click', () => {
     let timer = setInterval(() => {
         moveBall(timer)
     }, 30);  
+    start_btn.disabled ='true';
 })
 
 //Move the ball
@@ -156,7 +157,7 @@ function checkCollision(timer){
 
     if(ballCurrentPosition[1] >= 345){ // collision on bottom wall, game over 
         clearInterval(timer);
-        scoreDOM.innerHTML = 'You Loose!';
+        scoreDOM.innerHTML = 'You Loose! Refresh to restart';
         document.removeEventListener('keydown','null');
     }
 
