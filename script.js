@@ -1,5 +1,6 @@
 const grid = document.querySelector('.grid');
 const scoreDOM = document.querySelector('#score');
+const start_btn = document.getElementById('start_btn');
 const blockWidth = 100; 
 const blockHeight = 20; 
 const ballDiameter = 15;
@@ -94,22 +95,31 @@ ball.style.left = ballCurrentPosition[0] + 'px';
 ball.style.top = ballCurrentPosition[1] + 'px';
 grid.appendChild(ball);
 
+//Start Button
+start_btn.addEventListener('click', () => {
+    let timer = setInterval(() => {
+        moveBall(timer)
+    }, 30);  
+})
 
 //Move the ball
-function moveBall(){
+function moveBall(timer){
+    console.log(timer, 'Timer in MoveBall');
     ballCurrentPosition[0] += xDirection;
     ballCurrentPosition[1] += yDirection;
 
     ball.style.left = ballCurrentPosition[0] + 'px';
     ball.style.top = ballCurrentPosition[1] + 'px';
-    checkCollision();
+    checkCollision(timer);
 }
 
-const timer = setInterval(moveBall, 30);  // 2px change in x/y direction every 50 ms
+
+// 2px change in x/y direction every 30 ms
+
 
 //Check collisions 
-function checkCollision(){
-
+function checkCollision(timer){
+    console.log(timer, 'Timer in checkCollision');
     //block & ball collisions 
     for(let i=0; i< blocks.length ; i++){// check if all 4 coordinates  are within a block
        
@@ -140,15 +150,14 @@ function checkCollision(){
             changeDirection();
         }
 
-
     if(ballCurrentPosition[0] >= 545 ||  ballCurrentPosition[0] <= 8 || ballCurrentPosition[1] <= 8 ){ // collision on side & top wall 
         changeDirection();
     }
 
     if(ballCurrentPosition[1] >= 345){ // collision on bottom wall, game over 
         clearInterval(timer);
-        scoreDOM.innerHTML = 'You Loose';
-        document.removeEventListener('keydown');
+        scoreDOM.innerHTML = 'You Loose!';
+        document.removeEventListener('keydown','null');
     }
 
 
@@ -173,29 +182,4 @@ function changeDirection(){
         return;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
