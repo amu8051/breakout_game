@@ -9,7 +9,7 @@ Demo:
 [Breakout Game.webm](https://user-images.githubusercontent.com/26090486/192937141-81fb1623-1404-4a83-9bfd-b2a301fbacab.webm)
 
 
-Try it out: https://comforting-sunshine-49a45d.netlify.app/
+Try it out: https://break-game-js.netlify.app/
 
 
 ![Breakout_Score7](https://user-images.githubusercontent.com/26090486/192937614-376d31e5-1d0d-48ed-ae51-6d7880e2afcf.png)
